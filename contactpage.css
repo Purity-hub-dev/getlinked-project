@@ -1,9 +1,78 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Unica+One&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Unica+One&display=swap");
+@font-face {
+  font-family: "ClashDisplay-Variable";
+  src: url("/WEB/fonts/ClashDisplay-Variable.woff2") format("woff2"),
+    url("/WEB/fonts/ClashDisplay-Variable.woff") format("woff"),
+    url("/WEB/fonts/ClashDisplay-Variable.ttf") format("truetype");
+  font-weight: 200 700;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ClashDisplay-Extralight";
+  src: url("/WEB/fonts/ClashDisplay-Extralight.woff2") format("woff2"),
+    url("/WEB/fonts/ClashDisplay-Extralight.woff") format("woff"),
+    url("/WEB/fonts/ClashDisplay-Extralight.ttf") format("truetype");
+  font-weight: 200;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ClashDisplay-Light";
+  src: url("/WEB/fonts/ClashDisplay-Light.woff2") format("woff2"),
+    url("/WEB/fonts/ClashDisplay-Light.woff") format("woff"),
+    url("/WEB/fonts/ClashDisplay-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ClashDisplay-Regular";
+  src: url("/WEB/fonts/ClashDisplay-Regular.woff2") format("woff2"),
+    url("/WEB/fonts/ClashDisplay-Regular.woff") format("woff"),
+    url("/WEB/fonts/ClashDisplay-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ClashDisplay-Medium";
+  src: url("/WEB/fonts/ClashDisplay-Medium.woff2") format("woff2"),
+    url("/WEB/fonts/ClashDisplay-Medium.woff") format("woff"),
+    url("/WEB/fonts/ClashDisplay-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ClashDisplay-Semibold";
+  src: url("/WEB/fonts/ClashDisplay-Semibold.woff2") format("woff2"),
+    url("/WEB/fonts/ClashDisplay-Semibold.woff") format("woff"),
+    url("/WEB/fonts/ClashDisplay-Semibold.ttf") format("truetype");
+  font-weight: 600;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ClashDisplay-Bold";
+  src: url("/WEB/fonts/ClashDisplay-Bold.woff2") format("woff2"),
+    url("/WEB/fonts/ClashDisplay-Bold.woff") format("woff"),
+    url("/WEB/fonts/ClashDisplay-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
 }
 
 .container {
@@ -36,7 +105,7 @@
   );
   --unica-one-family: "Unica One", cursive;
   --montensarri-family: "Montserrat", sans-serif;
-  --font-size: 16px;
+  --font-size: 12px;
   --normal-style: normal;
   --line-height: normal;
 }
@@ -51,27 +120,39 @@
 nav {
   background: var(--background-color);
 }
+.container {
+  max-width: 80%;
+  margin: 0 auto;
+}
+#next {
+  display: none;
+}
+#mobile-content {
+  display: none;
+}
 .nav-general-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 20px 0;
 }
-.nav-logo h3 {
-  font-size: 36px;
+.nav-logo h3 a {
+  text-decoration: none;
+  font-family: "ClashDisplay-Semibold";
+  font-size: 28px;
   font-style: var(--normal-style);
   font-weight: 700;
   line-height: var(--line-height);
   color: var(--white);
 }
 #linked {
-  font-size: 36px;
+  font-family: "ClashDisplay-Semibold";
+  font-size: 28px;
   font-style: var(--normal-style);
   font-weight: 700;
   line-height: var(--line-height);
   color: var(--purple);
 }
-
 .nav-links {
   display: flex;
   align-items: center;
@@ -89,7 +170,7 @@ nav {
   color: var(--white);
   list-style-type: none;
   font-family: var(--montensarri-family);
-  font-size: var(--font-size);
+  font-size: 14px;
   font-style: var(--normal-style);
   line-height: var(--line-height);
   font-weight: 400;
@@ -101,8 +182,8 @@ nav {
   -webkit-text-fill-color: transparent;
 }
 .nav_btn {
-  width: 172px;
-  height: 53px;
+  width: 146px;
+  height: 50px;
   flex-shrink: 0;
   border-radius: 4px;
   background: var(--btn-background);
@@ -112,8 +193,8 @@ nav {
 .nav_btn a {
   text-decoration: none;
   color: var(--white);
-  /* font-family: var(--montensarri-family); */
-  font-size: var(--font-size);
+  font-family: var(--montensarri-family);
+  font-size: 16px;
   font-style: var(--normal-style);
   line-height: var(--line-height);
   font-weight: 400;
@@ -125,31 +206,38 @@ nav {
 .content-info-page {
   color: var(--white);
   font-family: var(--montensarri-family);
-  font-size: 16px;
+  font-size: 13px;
   font-style: var(--line-height);
   font-weight: 400;
   line-height: var(--normal-style);
 }
 .content-info-page h1 {
   color: var(--purple);
-  padding-bottom: 10px;
+  font-family: "ClashDisplay-Semibold";
+  font-weight: 600;
+  font-size: 28px;
+  font-style: var(--normal-style);
+  line-height: var(--line-height);
+
+  /* padding-bottom: 10px; */
 }
 .content-info-page h4 {
   color: var(--purple);
-  padding: 15px 0;
+  /* padding: 15px 0; */
 }
 .content-info-page p {
   padding: 10px 0;
-  width: 150px;
+  /* width: 150px; */
 }
 .section-content {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 .contact-form-page {
-  width: 617px;
-  height: 611px;
+  width: 534px;
+  height: 590px;
   flex-shrink: 0;
   border-radius: 12px;
   background: rgba(255, 255, 255, 0.03);
@@ -159,15 +247,20 @@ nav {
 }
 .contact-form-page h2 {
   color: var(--purple);
-  /* font-family: ; */
-  font-size: 20px;
+  font-family: "ClashDisplay-Semibold";
+  font-size: 18px;
   font-style: var(--normal-style);
   font-weight: 600;
   line-height: var(--line-height);
 }
 .contact-form-page input {
-  width: 437px;
-  height: 47px;
+  font-family: var(--montensarri-family);
+  font-size: var(--font-size);
+  font-style: var(--normal-style);
+  font-weight: 400;
+  line-height: var(--normal-style);
+  width: 368px;
+  height: 40px;
   flex-shrink: 0;
   border-radius: 4px;
   border: 1px solid #fff;
@@ -180,8 +273,13 @@ nav {
   padding-left: 20px;
 }
 .contact-form-page textarea {
-  width: 437px;
-  height: 119px;
+  font-family: var(--montensarri-family);
+  font-size: var(--font-size);
+  font-style: var(--normal-style);
+  font-weight: 400;
+  line-height: var(--normal-style);
+  width: 368px;
+  height: 120px;
   flex-shrink: 0;
   border-radius: 4px;
   border: 1px solid #fff;
@@ -192,8 +290,15 @@ nav {
   padding-left: 10px;
 }
 button {
-  width: 172px;
-  height: 53px;
+  font-family: var(--montensarri-family);
+  font-size: 14px;
+  font-style: var(--normal-style);
+  font-weight: 400;
+  line-height: var(--normal-style);
+  color: var(--white);
+  outline: none;
+  width: 146px;
+  height: 50px;
   flex-shrink: 0;
   border-radius: 4px;
   background: linear-gradient(
@@ -207,36 +312,57 @@ button {
   align-items: center;
   justify-content: center;
   margin: 0 auto;
+  border: none;
 }
-.contact-star .top {
-  position: absolute;
-  top: 80px;
-  left: 100px;
-}
-.contact-star .bottom {
-  position: absolute;
-  top: 600px;
-  left: 400px;
-}
-.contact-star .left {
-  position: absolute;
-  top: 600px;
-  left: 1150px;
-}
-.contact-star .right {
-  position: absolute;
-  top: 100px;
-  left: 1050px;
-}
-@media (max-width: 500px) {
+
+@media (max-width: 600px) {
+  .general-container {
+    background: var(--background-color);
+    background-image: url(/images/lens-flare.png);
+    background-repeat: no-repeat;
+    background-size: 500px;
+    background-position: -60px;
+    height: 100vh;
+  }
+  #next {
+    display: block;
+    padding-bottom: 50px;
+    background-image: url(/images/Ellipse\ 4.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+  #mobile-content {
+    text-align: center;
+    display: block;
+    color: var(--white);
+    font-family: var(--montensarri-family);
+    font-size: 12px;
+    font-style: var(--normal-style);
+    font-weight: 400;
+    line-height: var(--line-height);
+    padding: 20px 0;
+  }
   .nav-general-container {
+    display: none;
+  }
+  .nav-logo h3 {
+    font-size: 20px;
+    text-align: center;
+  }
+  .mobile-section-icon {
     display: none;
   }
   .content-info-page {
     display: none;
   }
+  .content-info-page h1 {
+    font-size: 28px;
+  }
+  .content-info-page p {
+    padding: 10px 0;
+  }
   .contact-form-page {
-    width: 390px;
+    width: 100%;
     height: 844px;
     flex-shrink: 0;
     border-radius: none;
@@ -244,17 +370,39 @@ button {
     box-shadow: none;
     padding: 30px;
   }
+  .contact-form-page h2 {
+    color: var(--purple);
+    font-family: "ClashDisplay-Semibold";
+    font-size: 18px;
+    font-style: var(--normal-style);
+    font-weight: 600;
+    line-height: var(--line-height);
+    text-align: center;
+  }
   .contact-form-page input {
-    width: 298px;
+    width: 100%;
     height: 47px;
     flex-shrink: 0;
+    margin: 10px auto;
+  }
+  ::placeholder {
+    color: var(--white);
+    padding-left: 20px;
   }
   .contact-form-page textarea {
-    width: 298px;
+    width: 100%;
     height: 160px;
     flex-shrink: 0;
   }
+  button {
+    width: 146px;
+    height: 50px;
+    flex-shrink: 0;
+    border: none;
+    display: block;
+  }
   .mobile-section-icon {
+    text-align: center;
     display: block;
     color: var(--purple);
     font-family: var(--montensarri-family);
@@ -262,7 +410,6 @@ button {
     font-style: var(--line-height);
     font-weight: 400;
     line-height: var(--normal-style);
-    text-align: center;
     padding-top: 20px;
   }
 }

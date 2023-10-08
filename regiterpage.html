@@ -11,9 +11,9 @@
         <nav>
             <div class="nav-general-container container">
                 <div class="nav-logo">
-                    <h3>
+                    <a href="/index.html"><h3>
                         get<span id="linked">linked</
-                        </h3>
+                    </h3></a>
                 </div>
                 <div class="nav-links">
                     <ul>
@@ -28,16 +28,17 @@
         </nav>
         <section>
             <div class="section-container container">
-                <div class="section-img">
-                    <img src="/images/register.png" alt="">
-                </div>
-                <div class="section-register-form">
+                <picture>
+                    <h1 id="picture-heading">Register</h1>
+                    <source media="(max-width: 600px)" srcset="/images/register-img-mobile.png">
+                    <img class="register-img" src="/images/register.png" alt="">
+                </picture>
+                <div class="section-content">
+                    <h1>Register</h1> 
+                    <p>Be part of this movement! <span><img src="/images/img.png" alt=""><img src="/images/image_processing20200511-10310-13mnlsx.png" alt=""></span></p>
+                    <h2>CREATE YOUR ACCOUNT</h2>
                     <form action="">
-                        <h1>Register</h1>
-                        <p>Be part of this movement! <span><img src="/images/img.png" alt=""><img src="/images/image_processing20200511-10310-13mnlsx.png" alt=""></span></p>
-                        <h2>CREATE YOUR ACCOUNT</h2>
-    
-                        <div class="form-flex">
+                        <div class="et-form-input">
                             <div class="teamA">
                                 <label for="name">Team’s Name</label>
                                 <br>
@@ -47,48 +48,96 @@
                                 <br>
                                 <input type="email" id="email" placeholder="Enter your email address">
                                 <br>
-                                <label for="category">Team’s Name</label>
+                                <label for="category">Category</label>
                                 <br>
-                        
-                                <select name="select" id="select">Select your category</select>
+                                <select name="" id="">
+                                    <option value="selected">Select your category</option>
+                                </select>
                             </div>
                             <div class="teamB">
                                 <label for="phone">Phone</label>
                                 <br>
                                 <input type="tel" id="phone" placeholder="Enter your phone number">
                                 <br>
-                                <label for="mail">project</label>
+                                <label for="mail">Project Topic</label>
                                 <br>
                                 <input type="text" id="project" placeholder="Project Topic">
                                 <br>
                                 <label for="group">Group Size</label>
                                 <br>
-                                <select name="selected" id="group">Select </select>
-                                
+                                <select name="selected" id="group">
+                                    <option value="">
+                                        Select
+                                    </option>
+                                </select>          
+                            </div>          
+                          
+                        </div>
+                        <div class="et-form-input-mobile">
+                            <label for="name">Team’s Name</label>
+                            <br>
+                            <input type="text" id="name" placeholder="Enter the name of your group">
+                            <br>
+                            <label for="phone">Phone</label>
+                            <br>
+                            <input type="tel" id="phone" placeholder="Enter your phone number">
+                            <br>
+                            <label for="mail">Email</label>
+                            <br>
+                            <input type="email" id="email" placeholder="Enter your email address">
+                            <br>
+                            <label for="mail">Project Topic</label>
+                            <br>
+                            <input type="text" id="project" placeholder="Project Topic">
+                            <br> 
+                            <div class="select-container-mobile">
+                                <label for="category">Category</label> <br>
+                                <select name="select" id="select1">
+                                    <option value="selected">Select</option>
+                                </select>
+                                <label for="group">Group Size</label>                 
+                                <select name="selected" id="group">
+                                    <option value="">
+                                        Select
+                                    </option>
+                                </select>         
                             </div>
                         </div>
+                        <div class="review-text">Please review your registration details before submitting  
+                        </div>
+                        <div class="footer-label">
+                            <input type="checkbox">
+                            <label for="text">I agreed with the event terms and conditions  and privacy policy</label>
+                        </div>
+                        <button class="register-btn" type="button">Register Now</button>   
                     </form>
-                    <span class="review-text">Please review your registration details before submitting</span>
-                    <br><br>
-                    <div class="footer-label">
-                        <input type="checkbox">
-                    <label for="text">I agreed with the event terms and conditions  and privacy policy</label>
+                </div>         
+            </div>
+            <div class="success-message-container container">
+                <div class="success-content-container">
+                    <picture>
+                        <source media="(max-width: 600px)" srcset="/images/successfully-done-mobile.png">
+                        <img class="donemark" src="/images/successfully-done-5108472-4288033 1.png" alt="">
+                    </picture>
+                    <picture>
+                        <source media="(max-width: 600px)" srcset="/images/successful-man-mobile.png">
+                        <img class="doneman" src="/images/successful-man-3025713-2526911 1.png" alt="">
+                    </picture>
+                    <div class="content">
+                        <h1>Congratulations <br>
+                            you have successfully
+                             Registered!</h1>
+                             <p>Yes, it was easy and you did it! <br>
+                                check your mail box for next step</p>
+                                <button class="btn">Back</a></button>
                     </div>
-                    <button class="register-btn">Register Now</button>
                 </div>
             </div>
-            <div class="pop-up-message container">
-                <img class="done" src="/images/successfully-done-5108472-4288033 1.png" alt="">
-                <img class="doneman" src="/images/successful-man-3025713-2526911 1.png" alt="">
-                <h1>Congratulations <br>
-                    you have successfully
-                     Registered!</h1>
-                     <p>Yes, it was easy and you did it! <br>
-                        check your mail box for next step</p>
-                        <button class="btn">Back</a></button>
-            </div>
-        </section>
+        </section> 
+        <div class="overlay"></div>
     </div>
+              
+        
     <script src="/registerpage.js"></script>
 </body>
 </html>
