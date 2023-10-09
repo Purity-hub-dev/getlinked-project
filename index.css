@@ -508,16 +508,20 @@ aside {
 main {
   background: var(--background-color);
 }
-.hidden-icon {
-  display: inline-block;
-  background: none;
-  border: none;
+.show-content .toggle-content {
+  display: block;
 }
 .hidden-icon {
   width: 20px;
+  display: none;
+  background: none;
+  border: none;
 }
-.show-icon {
-  display: inline-block;
+.show-content .hidden-icon {
+  display: inline;
+}
+.show-content .show-icon {
+  display: none;
   background: none;
   border: none;
 }
@@ -575,7 +579,7 @@ main {
   padding-top: 20px;
   padding-bottom: 10px;
 }
-.main-article .toggle-content {
+.toggle-content {
   color: var(--white);
   font-family: var(--montensarri-family);
   font-size: 12px;
