@@ -7,6 +7,9 @@ const links = document.querySelector(".nav-links");
 openToggle.addEventListener("click", function () {
   links.classList.toggle("show-links");
 });
+closeToggle.addEventListener("click", function () {
+  links.classList.remove("show-links");
+});
 
 // main container [frequently asked questions]
 

@@ -117,7 +117,7 @@
   background-position: -60px, right bottom;
   /* height: 100; */
 }
-nav {
+body {
   background: var(--background-color);
 }
 .container {

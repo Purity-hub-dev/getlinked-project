@@ -29,7 +29,7 @@
         <section>
             <div class="section-container container">
                 <picture>
-                    <h1 id="picture-heading">Register</h1>
+                    <a href="/index.html"><h1 id="picture-heading">Register</h1></a>
                     <source media="(max-width: 600px)" srcset="/images/register-img-mobile.png">
                     <img class="register-img" src="/images/register.png" alt="">
                 </picture>
@@ -113,16 +113,18 @@
                     </form>
                 </div>         
             </div>
-            <div class="success-message-container container">
-                <div class="success-content-container">
-                    <picture>
-                        <source media="(max-width: 600px)" srcset="/images/successfully-done-mobile.png">
-                        <img class="donemark" src="/images/successfully-done-5108472-4288033 1.png" alt="">
-                    </picture>
-                    <picture>
-                        <source media="(max-width: 600px)" srcset="/images/successful-man-mobile.png">
-                        <img class="doneman" src="/images/successful-man-3025713-2526911 1.png" alt="">
-                    </picture>
+            <div class="modalOverlay">
+                <div class="success-message-container">
+                    <div class="success-img">
+                        <picture>
+                            <source media="(max-width: 600px)" srcset="/images/successfully-done-mobile.png">
+                            <img class="donemark" src="/images/successfully-done-5108472-4288033 1.png" alt="">
+                        </picture>
+                        <picture>
+                            <source media="(max-width: 600px)" srcset="/images/successful-man-mobile.png">
+                            <img class="doneman" src="/images/successful-man-3025713-2526911 1.png" alt="">
+                        </picture>
+                    </div>
                     <div class="content">
                         <h1>Congratulations <br>
                             you have successfully
@@ -134,10 +136,7 @@
                 </div>
             </div>
         </section> 
-        <div class="overlay"></div>
-    </div>
-              
-        
+    </div>   
     <script src="/registerpage.js"></script>
 </body>
 </html>
