@@ -174,8 +174,9 @@ body {
   font-style: var(--normal-style);
   line-height: var(--line-height);
   font-weight: 400;
+  transition: all 0.5s;
 }
-.nav-links ul a span {
+.nav-links ul a:hover {
   background: linear-gradient(90deg, #903aff 3.08%, #ff26b9 93.85%);
   background-clip: text;
   -webkit-background-clip: text;
@@ -189,6 +190,13 @@ body {
   background: var(--btn-background);
   border: none;
   font-family: var(--montensarri-family);
+  transition: all 0.5s;
+}
+.nav_btn:hover {
+  border: 4px solid var(--pink);
+  background: none;
+  transition-timing-function: ease-in-out;
+  cursor: pointer;
 }
 .nav_btn a {
   text-decoration: none;
@@ -313,6 +321,13 @@ button {
   justify-content: center;
   margin: 0 auto;
   border: none;
+  transition: all 0.5s;
+}
+button:hover {
+  border: 4px solid var(--pink);
+  background: none;
+  transition-timing-function: ease-in-out;
+  cursor: pointer;
 }
 
 @media (max-width: 600px) {

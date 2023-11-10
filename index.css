@@ -191,6 +191,14 @@ nav {
   font-style: var(--normal-style);
   line-height: var(--line-height);
   font-weight: 400;
+  transition: all 0.5s;
+}
+.nav-links ul a:hover {
+  background: var(--btn-background);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition-timing-function: ease-in-out;
 }
 .nav_btn {
   width: 172px;
@@ -200,6 +208,13 @@ nav {
   background: var(--btn-background);
   border: none;
   font-family: var(--montensarri-family);
+  transition: all 0.5s;
+}
+.nav_btn:hover {
+  border: 4px solid var(--pink);
+  background: none;
+  transition-timing-function: ease-in-out;
+  cursor: pointer;
 }
 .nav_btn a {
   text-decoration: none;
@@ -286,6 +301,13 @@ header {
   border: none;
   font-family: var(--montensarri-family);
   margin-top: 40px;
+  transition: all 0.5s;
+}
+.header-btn:hover {
+  border: 4px solid var(--pink);
+  background: none;
+  transition-timing-function: ease-in-out;
+  cursor: pointer;
 }
 .header-btn a {
   text-decoration: none;
@@ -492,6 +514,13 @@ aside {
   background: var(--btn-background);
   border: none;
   margin-top: 50px;
+  transition: all 0.5s;
+}
+.sum-btn:hover {
+  border: 4px solid var(--pink);
+  background: none;
+  transition-timing-function: ease-in-out;
+  cursor: pointer;
 }
 .sum-btn a {
   text-decoration: none;
@@ -1116,6 +1145,13 @@ figcaption {
   align-items: center;
   justify-content: center;
   margin: 30px auto;
+  transition: all 0.5s;
+}
+.figcaption-btn:hover {
+  border: 4px solid var(--pink);
+  background: none;
+  transition-timing-function: ease-in-out;
+  cursor: pointer;
 }
 .figcaption-btn a {
   text-decoration: none;
