@@ -7,6 +7,7 @@
   width: 43px;
   position: relative;
   display: block;
+  transition: all 0.5s ease-in-out;
 }
 .open-toggle:hover {
   transform: rotate(30deg);
@@ -14,6 +15,7 @@
 .close-toggle {
   display: block;
   position: absolute;
+  transition: all 0.5s ease-in-out;
   left: 86%;
   top: 14px;
   width: 43px;
@@ -255,7 +257,7 @@ aside {
 .main-section {
   background: var(--background-color);
 }
-.sum-star-bottom img{
+.sum-star-bottom img {
   width: 10px;
 }
 .sum-container {
@@ -343,7 +345,9 @@ aside {
 main {
   background: var(--background-color);
 }
-.main-star, .main-bottom, img {
+.main-star,
+.main-bottom,
+img {
   width: 10px;
 }
 .main-container {

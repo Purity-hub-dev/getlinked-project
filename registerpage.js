@@ -10,3 +10,5 @@ closebtn.addEventListener("click", function () {
   modalOverlay.classList.remove("active");
   document.body.style.overflow = "unset";
 });
+
+//validity check

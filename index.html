@@ -4,12 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>getlinked Tech Hackathon 1.0</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="WEB/css/clash-display.css">
     <link rel="stylesheet" href="/index.css" />
     <link rel="stylesheet" media="(max-width: 600px)" href="mobile.css">
   </head>
   <body>
-    <nav>
+    <nav id="nav">
       <div class="nav-general-container container">
           <div class="nav-heading">
               <h3>
@@ -22,7 +28,7 @@
                   <a href="#"><li>Timeline</li></a>
                   <a href="#"><li>Overview</li></a>
                   <a href="#"><li>FAQs</li></a>
-                  <a class="contact" href="/contactpage.html"><li>Contact</li></a>
+                  <a id="contact" class="contact" href="/contactpage.html"><li>Contact</li></a>
               </ul>
               <button class="nav_btn"><a href="/regiterpage.html">Register</a>
               </button>
@@ -650,10 +656,10 @@
               <a href="#"><li>Register</li></a>
               <a href="#"><li><span>Follow us</span></li></a>
               <div class="footer-icons">
-                <a href=""><img src="/images/mdi_instagram.svg" alt="" /></a>
-                <a href=""><img src="/images/twitter.png" alt="" /></a>
-                <a href=""><img src="/images/facebook.png" alt="" /></a>
-                <a href=""><img src="/images/ri_linkedin-fill.png" alt="" /></a>
+                <a href="#"><img src="/images/mdi_instagram.svg" alt="instagram icons" /></a>
+                <a href="https://twitter.com/mzzpurity?s=11"><img src="/images/twitter.png" alt="twitter icon" /></a>
+                <a href="https://web.facebook.com/profile.php?id=100006884268752"><img src="/images/facebook.png" alt="facebook icon" /></a>
+                <a href="https://www.linkedin.com/in/fatimatsiyaka"><img src="/images/ri_linkedin-fill.png" alt="linkedin icon" /></a>
               </div>
             </ul>
           </div>
@@ -670,10 +676,13 @@
           </div>
         </div>
         <div class="footer-end">
-          <p>All rights reserved. © getlinked Ltd.</p>
+          <p>copyright &copy; getlinked Ltd <span id="date"></span>.all rights reserved
+          </p>
         </div>
+          <a href="#contact" class="topLink scroll-Link">
+            <i class="fas fa-arrow-up "></i>  
+          </a>    
       </footer>
-      
     </div>
     <script src="/index.js"></script>
   </body>

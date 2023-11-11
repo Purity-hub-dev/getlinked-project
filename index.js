@@ -11,47 +11,28 @@ closeToggle.addEventListener("click", function () {
   links.classList.remove("show-links");
 });
 
+//fixed nav bar
+
+const navBar = document.getElementById("nav");
+const topLink = document.querySelector(".topLink");
+
+window.addEventListener("scroll", function () {
+  const scrollHeight = window.pageYOffset;
+  const navHeight = navBar.getBoundingClientRect().height;
+  if (scrollHeight > navHeight) {
+    navBar.classList.add("fixedNav");
+  } else {
+    navBar.classList.remove("fixedNav");
+  }
+
+  if (scrollHeight > 600) {
+    topLink.classList.add("show-topLink");
+  } else {
+    topLink.classList.remove("show-topLink");
+  }
+});
+
 // main container [frequently asked questions]
-
-//show content
-// function showHiddenContent(event) {
-//   const targetButtonId = event.target.getAttribute("data-target");
-//   const hiddenContent = document.querySelector(
-//     `.toggle-content[data-content-id="${targetButtonId}"]`
-//   );
-//   if (hiddenContent){
-//     hiddenContent.style.display = "block";
-//   }
-// }
-// //hide content
-// function hideHiddenContent(event) {
-//   const targetButtonId = event.target.getAttribute("data-target");
-//   const hiddenContent = document.querySelector(
-//     `.toggle-content[data-content-id="${targetButtonId}"]`
-//   );
-//   if (hiddenContent){
-//     hiddenContent.style.display = "none";
-//   }
-// }
-//   const toggleShowIcons = document.querySelectorAll(".show-icon");
-//   toggleShowIcons.forEach(button => {
-//     button.addEventListener("click", showHiddenContent);
-//   })
-
-//   const toggleHideIcon = document.querySelectorAll(".hidden-icon");
-//   toggleHideIcon.forEach(button => {
-//     button.addEventListener("click", hideHiddenContent);
-//   });
-
-// other way to do it
-// const buttons = document.querySelectorAll(".toggle-container");
-// buttons.forEach(function (button) {
-//   button.addEventListener("click", function (event) {
-//     // console.log(event.currentTarget.parentElement.parentElement)
-//     const question = event.currentTarget.parentElement.parentElement;
-//     question.classList.toggle("show-content")
-//   });
-// });
 
 //by selector
 const questions = document.querySelectorAll(".main-article");
@@ -103,7 +84,6 @@ const futureMonth = futureDate.getMonth();
 const futureDay = futureDate.getDay();
 const futureMinutes = futureDate.getMinutes();
 const futureSeconds = futureDate.getSeconds();
-// console.log(futureYear);
 
 // how many minutes make a day
 
@@ -111,12 +91,12 @@ const futureSeconds = futureDate.getSeconds();
 //1m = 60s
 //1hr = 60m
 //1d = 24hr
+
 const futureTime = futureDate.getTime();
-// console.log(futureTime);
+
 function getFutureTime() {
   const currentTime = new Date().getTime();
   const getRemainingTime = futureTime - currentTime;
-  // console.log(getRemainingTime);
 
   const oneDay = 24 * 60 * 60 * 1000;
   const oneHour = 60 * 60 * 1000;
@@ -126,7 +106,6 @@ function getFutureTime() {
   const hours = Math.floor((getRemainingTime % oneDay) / oneHour);
   const minutes = Math.floor((getRemainingTime % oneHour) / oneMinute);
   const seconds = Math.floor((getRemainingTime % oneMinute) / 1000);
-  // console.log(seconds);
 
   const values = [days, hours, minutes, seconds];
   function addZero(item) {
@@ -144,3 +123,50 @@ function getFutureTime() {
 }
 setInterval(getFutureTime, 1000);
 getFutureTime();
+
+//copy right date
+const copyRight = document.getElementById("date");
+const currentDate = new Date();
+copyRight.innerHTML = currentDate.getFullYear();
+
+// main container [frequently asked questions]
+
+//show content
+// function showHiddenContent(event) {
+//   const targetButtonId = event.target.getAttribute("data-target");
+//   const hiddenContent = document.querySelector(
+//     `.toggle-content[data-content-id="${targetButtonId}"]`
+//   );
+//   if (hiddenContent){
+//     hiddenContent.style.display = "block";
+//   }
+// }
+// //hide content
+// function hideHiddenContent(event) {
+//   const targetButtonId = event.target.getAttribute("data-target");
+//   const hiddenContent = document.querySelector(
+//     `.toggle-content[data-content-id="${targetButtonId}"]`
+//   );
+//   if (hiddenContent){
+//     hiddenContent.style.display = "none";
+//   }
+// }
+//   const toggleShowIcons = document.querySelectorAll(".show-icon");
+//   toggleShowIcons.forEach(button => {
+//     button.addEventListener("click", showHiddenContent);
+//   })
+
+//   const toggleHideIcon = document.querySelectorAll(".hidden-icon");
+//   toggleHideIcon.forEach(button => {
+//     button.addEventListener("click", hideHiddenContent);
+//   });
+
+// other way to do it
+// const buttons = document.querySelectorAll(".toggle-container");
+// buttons.forEach(function (button) {
+//   button.addEventListener("click", function (event) {
+//     // console.log(event.currentTarget.parentElement.parentElement)
+//     const question = event.currentTarget.parentElement.parentElement;
+//     question.classList.toggle("show-content")
+//   });
+// });
